@@ -1,4 +1,5 @@
-# Python_Codes :snake: :smile:
+# Python_Codes :snake: 
+:smile:
 
 ## Introduction :wave:
 
