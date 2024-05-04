@@ -1,7 +1,7 @@
-# Practice Test 
-This is a new Markdown file.
+#  📘 Practice Test 
+This markdown file contains Python programs for various mathematical calculations.
 
-###### 1. Write a Python program that declares two variables, `x` and `y`, and swaps their values without using a third variable.
+###### 1. 🔄  Write a Python program that declares two variables, `x` and `y`, and swaps their values without using a third variable.
 
 ```python
 
@@ -21,7 +21,7 @@ print ( "x = " , x )
 print ( "y = " , y )
 ```
 
-###### 2. Create a Python program that calculates the area of a rectangle using variables for length and width entered by the user.
+###### 2. 📏 Create a Python program that calculates the area of a rectangle using variables for length and width entered by the user.
 
 ```python
 
@@ -36,7 +36,7 @@ area = length * width
 print ( " Area of the Rectangle is : " , area , "unit per square " )
 ```
 
-###### 3. Write a Python program that converts temperature from Celsius to Fahrenheit using variables.
+###### 3. 🌡 Write a Python program that converts temperature from Celsius to Fahrenheit using variables.
 
 ```python 
 
@@ -51,7 +51,7 @@ print ( " The Temperature in Celsius is : " , celsius , " ° C " )
 print ( " The Temperature in Fahrenheit is : " , fahrenheit , " ° F " )
 ```
 
-###### 4. Create a Python program that takes the radius of a circle as input and calculates its circumference using variables.
+###### 4. ⭕  Create a Python program that takes the radius of a circle as input and calculates its circumference using variables.
 
 ```python 
 
@@ -65,7 +65,7 @@ circumference = 2 * 3.14 * radius
 print ( " The Circumference of the Circle is : " , circumference , "unit " )
 ```
 
-###### 5. Write a Python program that calculates the volume of a cylinder using variables for radius and height entered by the user.
+###### 5. 🛢 Write a Python program that calculates the volume of a cylinder using variables for radius and height entered by the user.
 
 ```python
 
@@ -80,7 +80,7 @@ volume = 3.14 * radius * radius * height
 print ( " The Volume of the Cylinder is : " , volume , "unit per cube " )
 ```
 
-###### 6. Write a Python program that calculates the simple interest using principal amount, rate, and time entered by the user using variables.
+###### 6. 💰 Write a Python program that calculates the simple interest using principal amount, rate, and time entered by the user using variables.
 
 ```python
 
