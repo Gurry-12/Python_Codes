@@ -90,5 +90,6 @@ dict1 = {
 }
 
 print(max(dict1.values()))
+
 print(min(dict1.values()))
 '''
