@@ -15,7 +15,7 @@ def play_audio(file):
 
 # Function to log activity
 def log_activity(activity):
-    with open(f"{activity}.txt", "a") as file:
+    with open(f"Python_Codes\\Intermediate\\healthy_programmer\\{activity}.txt", "a") as file:
         file.write(f"{activity} at {datetime.now()}\n")
 
 # Function to handle reminders
