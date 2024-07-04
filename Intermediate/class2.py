@@ -1,8 +1,7 @@
 # Certainly! Here are some questions that focus on the practical application of static methods and class methods in Python:
 
-# ### Static Methods and Class Methods Questions
-
-# 1. **Define a Python class named `MathOperations` that includes a static method to calculate the square of a number.**
+# 1. **Define a Python class named `MathOperations` 
+# that includes a static method to calculate the square of a number.**
 
 # 2. **Create a class `TemperatureConverter` with static methods to convert temperatures between Celsius, Fahrenheit, and Kelvin.**
 
