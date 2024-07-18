@@ -1,35 +1,217 @@
-# Certainly! Here are some questions focused on multiple inheritance in Python:
-
 # ### Multiple Inheritance Problems
 
-# 1. **Create two base classes `Flyable` and `Swimmable` each with a method `move`. Implement a subclass `Duck` that inherits from both `Flyable` and `Swimmable` and overrides the `move` method to print both flying and swimming actions.**
+# 1. Create two base classes `Flyable` and `Swimmable` each with a method `move`.
+# Implement a subclass `Duck` that inherits from both `Flyable` and `Swimmable` and 
+# overrides the `move` method to print both flying and swimming actions.
 
-# 2. **Define two classes `Teacher` and `Engineer` each with an attribute `name` and a method `work`. Create a subclass `TeacherEngineer` that inherits from both classes and overrides the `work` method to include both teaching and engineering activities.**
+#base class 1
+class Flyable:
+    
+    def move(self):
+        return "I can fly"
 
-# 3. **Create two classes `Person` and `Athlete` each with an attribute `name` and a method `introduce`. Implement a subclass `AthleticPerson` that inherits from both and overrides the `introduce` method to include information from both base classes.**
+#base class 2
+class Swimmable:
+    
+    def move(self):
+        return "I can swim"
 
-# 4. **Write two classes `MusicPlayer` and `VideoPlayer` each with methods `play` and `stop`. Create a subclass `MediaPlayer` that inherits from both and overrides the `play` and `stop` methods to handle both music and video.**
+# sub class 
+class Duck(Flyable, Swimmable):
+    
+    def move(self):
+        return f"{Flyable.move(self)} and {Swimmable.move(self)}"
+    
 
-# 5. **Define two classes `ElectricVehicle` and `GasVehicle` each with an attribute `fuel_type` and a method `refuel`. Implement a subclass `HybridVehicle` that inherits from both and provides its own `refuel` method.**
+duck = Duck()
+print(duck.move()) #I can fly and I can swim
 
-# 6. **Create two classes `Readable` and `Writable` each with a method `access`. Create a subclass `File` that inherits from both and overrides the `access` method to handle both reading and writing.**
 
-# 7. **Write two classes `Artist` and `Writer` each with a method `create_art` and `write_book` respectively. Implement a subclass `CreativePerson` that inherits from both and adds a method `create` to call both `create_art` and `write_book`.**
 
-# 8. **Define two classes `DesktopComputer` and `Laptop` each with an attribute `processor`. Create a subclass `HybridComputer` that inherits from both and adds a method to display processor information from both base classes.**
+# 2. Define two classes `Teacher` and `Engineer` each with an attribute `name` and a method `work`.
+# Create a subclass `TeacherEngineer` that inherits from both classes and overrides the `work` 
+# method to include both teaching and engineering activities.
 
-# 9. **Create two classes `Chef` and `Driver` each with methods `cook` and `drive`. Implement a subclass `PersonalAssistant` that inherits from both and overrides the methods to include multitasking actions.**
+#base class 1 
+class Teacher:
+    
+    #constructor 
+    def __init__(self,name):
+        self.name = name
+        
+    #method 
+    def work(self):
+        return "I am a teacher"
+    
+#base class 2
+class Engineer:
+        
+        #constructor
+        def __init__(self,name):
+            self.name = name
+            
+        #method
+        def work(self):
+            return "I am an engineer"
+        
+#subclass
+class TeacherEngineer(Teacher, Engineer):
+    
+    def work(self):
+        return f"{Teacher.work(self)} and {Engineer.work(self)}"
+    
+teacher_engineer = TeacherEngineer("John")
+print(teacher_engineer.work()) #I am a teacher and I am an engineer
 
-# 10. **Write two classes `Doctor` and `Pilot` each with an attribute `license_number` and a method `work`. Create a subclass `DoctorPilot` that inherits from both and overrides the `work` method to include both medical and aviation activities.**
 
-# 11. **Define two classes `Runner` and `Swimmer` each with an attribute `speed`. Implement a subclass `Triathlete` that inherits from both and adds a method to display combined speed.**
+# 3. Create two classes `Person` and `Athlete` each with an attribute `name` and a method `introduce`.
+# Implement a subclass `AthleticPerson` that inherits from both and overrides the `introduce`
+# method to include information from both base classes.
 
-# 12. **Create two classes `SolarPowered` and `BatteryPowered` each with an attribute `power_source` and a method `generate_power`. Implement a subclass `HybridDevice` that inherits from both and overrides the `generate_power` method to combine both sources.**
+#base class 1
+class Person:
+        
+        #constructor
+        def __init__(self,name):
+            self.name = name
+            
+        #method
+        def introduce(self):
+            return "I am a person"
+        
+#base class 2
+class Athlete:
+        
+        #constructor
+        def __init__(self,name):
+            self.name = name
+            
+        #method
+        def introduce(self):
+            return "I am an athlete"
+        
+#subclass
+class AthleticPerson(Person, Athlete):
 
-# 13. **Write two classes `Mother` and `Father` each with an attribute `surname`. Create a subclass `Child` that inherits from both and adds a method to display the combined surname.**
+    def introduce(self):
+        return f"{Person.introduce(self)} and {Athlete.introduce(self)}"
 
-# 14. **Define two classes `Car` and `Boat` each with an attribute `vehicle_type`. Implement a subclass `AmphibiousVehicle` that inherits from both and overrides the attribute to indicate it can operate both on land and water.**
+athletic_person = AthleticPerson("John")
+print(athletic_person.introduce()) #I am a person and I am an athlete
 
-# 15. **Create two classes `Keyboard` and `TouchScreen` each with methods `input_text`. Implement a subclass `HybridInputDevice` that inherits from both and overrides the `input_text` method to handle both input types.**
 
-# Would you like specific examples or explanations for these questions?
+# 4. Write two classes `MusicPlayer` and `VideoPlayer` each with methods `play` and `stop`. 
+# Create a subclass `MediaPlayer` that inherits from both and overrides the `play` and `stop` methods to handle both music and video.
+
+
+#base class 1
+class MusicPlayer:
+
+    def play(self):
+        return "Playing music"
+    
+    def stop(self):
+        return "Stopped playing music"
+    
+#base class 2
+class VideoPlayer:
+    
+        def play(self):
+            return "Playing video"
+        
+        def stop(self):
+            return "Stopped playing video"
+        
+#subclass
+class MediaPlayer(MusicPlayer, VideoPlayer):
+    
+    def play(self):
+        return f"{MusicPlayer.play(self)} and {VideoPlayer.play(self)}"
+    
+    def stop(self):
+        return f"{MusicPlayer.stop(self)} and {VideoPlayer.stop(self)}"
+
+media_player = MediaPlayer()
+print(media_player.play()) #Playing music and Playing video
+print(media_player.stop()) #Stopped playing music and Stopped playing video
+
+
+# 5. Define two classes `ElectricVehicle` and `GasVehicle` each with an attribute `fuel_type` and a method `refuel`.
+# Implement a subclass `HybridVehicle` that inherits from both and provides its own `refuel` method.
+
+#base class 1
+class ElectricVehicle:
+    
+    def refuel(self):
+        return "Refueling electric vehicle"
+    
+#base class 2
+class GasVehicle:
+    
+    def refuel(self):
+        return "Refueling gas vehicle"
+    
+#subclass
+
+class HybridVehicle(ElectricVehicle, GasVehicle):
+        
+        def refuel(self):
+            return "Refueling hybrid vehicle"
+        
+hybrid_vehicle = HybridVehicle()
+print(hybrid_vehicle.refuel()) #Refueling hybrid vehicle
+
+    
+
+# 6. Create two classes `Readable` and `Writable` each with a method `access`.
+# Create a subclass `File` that inherits from both and overrides the `access` method to handle both reading and writing.
+
+#base class 1
+class Readable:
+        
+        def access(self):
+            return "Reading file"
+        
+#base class 2
+class Writable:
+
+        def access(self):
+            return "Writing file"
+        
+#subclass
+class File(Readable, Writable):
+        
+        def access(self):
+            return f"{Readable.access(self)} and {Writable.access(self)}"
+        
+file = File()
+print(file.access()) #Reading file and Writing file
+
+
+# 7. Write two classes `Artist` and `Writer` each with a method `create_art` and `write_book` respectively.
+# Implement a subclass `CreativePerson` that inherits from both and adds a method `create` to call both `create_art` and `write_book`.
+
+
+#base class 1
+class Artist:
+            
+            def create_art(self):
+                return "Creating art"
+            
+#base class 2
+class Writer:
+
+
+            def write_book(self):
+                return "Writing book"
+            
+#subclass
+class CreativePerson(Artist, Writer):
+
+    def create(self):
+        return f"{Artist.create_art(self)} and {Writer.write_book(self)}"
+    
+    
+creative_person = CreativePerson()
+print(creative_person.create()) #Creating art and Writing book
+
